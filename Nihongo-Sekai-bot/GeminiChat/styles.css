@@ -33,7 +33,7 @@ body {
   bottom: 80px; /* cách icon toggle khoảng 10-20px */
   right: 20px;
   width: 320px;  /* nhỏ hơn */
-  height: 450px; /* phù hợp */
+  height: 400px; /* phù hợp */
   overflow-y: auto;
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
