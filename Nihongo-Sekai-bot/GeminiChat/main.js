@@ -47,8 +47,8 @@ async function sendMessage() {
   // Add user message
   message_area.innerHTML += `
   <div class="message user-message">
-    <div class="img"><img class="user" src="/my_face-removebg-preview.png" alt=""></div>
     <div class="text">${prompt}</div>
+    <div class="img"><img class="user" src="/Teto-kasane-nig.gif" alt=""></div>
   </div>`;
   input.value = "";
   loader.style.visibility = "visible";

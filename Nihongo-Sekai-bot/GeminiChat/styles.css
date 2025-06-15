@@ -16,27 +16,25 @@
 }
 
 body {
+  background: transparent;
   height: 100vh;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #111927;
-  background-image:
-    radial-gradient(at 47% 33%, hsl(162, 77%, 40%) 0, transparent 59%),
-    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
-  background-repeat: no-repeat;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+
 .chatCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   bottom: 80px; /* cách icon toggle khoảng 10-20px */
   right: 20px;
   width: 320px;  /* nhỏ hơn */
-  height: 400px; /* phù hợp */
+  height: 450px; /* phù hợp */
   overflow-y: auto;
-  padding-right: 5px;
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   background-color: rgba(47, 47, 61, 0.85);
@@ -54,6 +52,30 @@ body {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
+}
+
+/* Gradient text (for "Sekai") */
+.gradient-text {
+    background: linear-gradient(270deg, #A5EAED, #FDB5DA, #A5EAED);
+    background-size: 600% 600%;
+    animation: moveGradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
@@ -113,10 +135,14 @@ body {
 }
 
 .message_area {
-  padding: 10px 10px 70px; /* Padding bottom to avoid input overlap */
+  /* padding: 10px 10px 70px; /* Padding bottom to avoid input overlap 
   max-height: calc(100% - 100px);
   overflow-y: auto;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; */
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  max-height: 100%;
 }
 
 .message {
@@ -145,6 +171,10 @@ body {
   font-size: 14px;
   color: #111;
   user-select: text;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 .ai-message {
@@ -161,7 +191,7 @@ body {
 }
 
 .input-area {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -198,21 +228,42 @@ body {
   user-select: text;
 }
 
+.input-area textarea.input {
+   flex-grow: 1;
+  max-height: 80px;
+  min-height: 40px;
+  overflow-y: auto;
+  resize: none;
+  padding: 10px 50px 10px 15px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.08); /* hoặc hsl(0 0% 100% / 0.06) nếu thích */
+backdrop-filter: blur(8px) saturate(150%);
+-webkit-backdrop-filter: blur(8px) saturate(150%);
+border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgb(133, 130, 130);
+  font-size: 14px;
+  line-height: 1.4;
+  user-select: text;
+  box-sizing: border-box;
+}
+
 .input-area .send {
   position: absolute;
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: rgba(133, 130, 130, 0.41);
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  color: rgb(133, 130, 130);
-  cursor: pointer;
+  background-color: rgba(133, 130, 130, 0.41);
+  color: white;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
