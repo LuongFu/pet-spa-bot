@@ -15,25 +15,7 @@
   display: none;
 }
 
-/* body {
-  background: transparent;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-} */
- body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: transparent;
-  width: fit-content;
-  height: fit-content;
-  transition: all 0.3s ease;
-}
-
-body.expanded {
+body {
   background: transparent;
   height: 100vh;
   width: 100vw;
