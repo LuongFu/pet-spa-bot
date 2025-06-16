@@ -47,11 +47,19 @@
     const isOpen = chatCard.classList.toggle('open');
     // chatToggle.addEventListener('click', () => {
     //   chatCard.classList.toggle('open');
+    //   chatToggle.title = chatCard.classList.contains('open') ? 'Close Chat' : 'Open Chat';
+    // });
     chatToggle.addEventListener('click', () => {
-  document.body.classList.toggle('expanded', isOpen);
-  chatToggle.title = isOpen ? 'Close Chat' : 'Open Chat';
-      // chatToggle.title = chatCard.classList.contains('open') ? 'Close Chat' : 'Open Chat';
-    });
+  if (chatCard.classList.contains('open')) {
+    chatCard.classList.remove('open');
+    document.body.classList.remove('expanded');
+    chatToggle.title = 'Open Chat';
+  } else {
+    chatCard.classList.add('open');
+    document.body.classList.add('expanded');
+    chatToggle.title = 'Close Chat';
+  }
+});
   </script>
   </body>
 </html>
