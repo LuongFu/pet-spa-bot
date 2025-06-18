@@ -17,8 +17,8 @@
 
 body {
   background: transparent;
-  height: 60vh;
-  width: 60vw;
+  height: 0vh;
+  width: 0vw;
   overflow: hidden;
   margin: 0;
   padding: 0;
