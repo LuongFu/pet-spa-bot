@@ -26,7 +26,7 @@ body {
 
 
 .chatCard {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
@@ -49,7 +49,6 @@ body {
 }
 
 .chatCard.open {
-  display: flex;
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
@@ -57,8 +56,7 @@ body {
 
 /* Gradient text (for "Sekai") */
 .gradient-text {
-    /* background: linear-gradient(270deg, #A5EAED, #FDB5DA, #A5EAED); */
-    background: red;
+    background: linear-gradient(270deg, #A5EAED, #FDB5DA, #A5EAED);
     background-size: 600% 600%;
     animation: moveGradient 5s ease infinite;
     -webkit-background-clip: text;
@@ -307,8 +305,4 @@ border: 1px solid rgba(255, 255, 255, 0.12);
 
 .dot3 {
   animation-delay: 0.66s;
-}
-
-.chatCard:not(.open) {
-  display: none;
 }

@@ -42,40 +42,19 @@
     <script type="module" src="/main.js"></script>
     <script type="module" src="/main.js"></script>
   <script>
-//   const chatToggle = document.getElementById('chatToggle');
-//   const chatCard = document.querySelector('.chatCard');
+  const chatToggle = document.getElementById('chatToggle');
+  const chatCard = document.querySelector('.chatCard');
 
-//   chatToggle.addEventListener('click', () => {
-//     const isOpen = chatCard.classList.toggle('open');
-//     chatToggle.title = isOpen ? 'Close Chat' : 'Open Chat';
+  chatToggle.addEventListener('click', () => {
+    const isOpen = chatCard.classList.toggle('open');
+    chatToggle.title = isOpen ? 'Close Chat' : 'Open Chat';
 
-//     // Gửi message đến trang chứa iframe (ASP.NET MVC)
-//     window.parent.postMessage(
-//       { type: isOpen ? "chatbot-open" : "chatbot-close" },
-//       "*"
-//     );
-//   });
-//   // Nhận lệnh từ parent
-// window.addEventListener("message", function (event) {
-//   if (!event.data || typeof event.data !== "object") return;
-
-//   if (event.data.command === "force-close-chatbot") {
-//     chatCard.classList.remove("open");
-//     chatToggle.title = "Open Chat";
-//   }
-// });
-const chatToggle = document.getElementById('chatToggle');
-const chatCard = document.querySelector('.chatCard');
-
-chatToggle.addEventListener('click', () => {
-  const isOpen = chatCard.classList.toggle('open');
-  chatToggle.title = isOpen ? 'Close Chat' : 'Open Chat';
-
-  // Gửi tín hiệu về host
-  window.parent.postMessage({
-    type: isOpen ? 'chatbot-open' : 'chatbot-close'
-  }, "*");
-});
+    // Gửi message đến trang chứa iframe (ASP.NET MVC)
+    window.parent.postMessage(
+      { type: isOpen ? "chatbot-open" : "chatbot-close" },
+      "*"
+    );
+  });
 </script>
   </body>
 </html>
