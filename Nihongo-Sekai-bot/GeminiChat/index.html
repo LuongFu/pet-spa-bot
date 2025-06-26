@@ -41,13 +41,28 @@
     </div>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/main.js"></script>
-  <script>
+  <!-- <script>
     const chatToggle = document.getElementById('chatToggle');
     const chatCard = document.querySelector('.chatCard');
     chatToggle.addEventListener('click', () => {
       chatCard.classList.toggle('open');
       chatToggle.title = chatCard.classList.contains('open') ? 'Close Chat' : 'Open Chat';
     });
-  </script>
+  </script> -->
+  <script>
+  const chatToggle = document.getElementById('chatToggle');
+  const chatCard = document.querySelector('.chatCard');
+
+  chatToggle.addEventListener('click', () => {
+    const isOpen = chatCard.classList.toggle('open');
+    chatToggle.title = isOpen ? 'Close Chat' : 'Open Chat';
+
+    // Gửi message đến trang chứa iframe (ASP.NET MVC)
+    window.parent.postMessage(
+      { type: isOpen ? "chatbot-open" : "chatbot-close" },
+      "*"
+    );
+  });
+</script>
   </body>
 </html>
