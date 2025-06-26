@@ -306,3 +306,7 @@ border: 1px solid rgba(255, 255, 255, 0.12);
 .dot3 {
   animation-delay: 0.66s;
 }
+
+.chatCard:not(.open) {
+  display: none;
+}
