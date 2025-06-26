@@ -26,7 +26,7 @@ body {
 
 
 .chatCard {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
@@ -49,6 +49,7 @@ body {
 }
 
 .chatCard.open {
+  display: flex;
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
@@ -56,7 +57,8 @@ body {
 
 /* Gradient text (for "Sekai") */
 .gradient-text {
-    background: linear-gradient(270deg, #A5EAED, #FDB5DA, #A5EAED);
+    /* background: linear-gradient(270deg, #A5EAED, #FDB5DA, #A5EAED); */
+    background: red;
     background-size: 600% 600%;
     animation: moveGradient 5s ease infinite;
     -webkit-background-clip: text;
