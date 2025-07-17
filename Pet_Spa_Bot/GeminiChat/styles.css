@@ -92,6 +92,12 @@ body {
   z-index: 2;
 }
 
+.img .user{
+  margin-left: 10px;
+  margin-top: 3px;
+  border-radius: 50%;
+  scale: 1.2;
+}
 .left {
   display: flex;
   align-items: center;
@@ -176,8 +182,8 @@ body {
 }
 
 .user-message .text {
-  background-color: rgb(108, 255, 206);
-  color: #000;
+  background-color: #FB632B;
+  color: #FFFFFF;
 }
 
 .input-area {
@@ -265,7 +271,7 @@ border: 1px solid rgba(255, 255, 255, 0.12);
 .loading {
   position: absolute;
   top: -30px;
-  left: 10px;
+  left: 5px;
   color: white;
   font-size: 14px;
   display: flex;
