@@ -54,12 +54,13 @@ body {
 
 /* Gradient text (for "Sekai") */
 .gradient-text {
-    background: linear-gradient(270deg, #A5EAED, #FDB5DA, #A5EAED);
+    background: linear-gradient(270deg, #E31B23, #FFFFFF, #FA612B);
     background-size: 600% 600%;
     animation: moveGradient 5s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+    margin-left: 10px;
 }
 
 @keyframes moveGradient {
@@ -75,7 +76,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
 
 .chatCard .head {
   position: sticky;
@@ -101,8 +101,6 @@ body {
 .left .img img {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 .left .name {
@@ -147,10 +145,8 @@ body {
 }
 
 .message .img img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 30px;
+  height: 30px;
   user-select: none;
 }
 

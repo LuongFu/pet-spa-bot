@@ -24,12 +24,12 @@ async function initializeChat() {
     {
       role: "user",
       parts: [
-        "Bạn là một chuyên gia sáng tạo nội dung cho một spa thú cưng cao cấp. Hãy viết một đoạn giới thiệu thân thiện và chuyên nghiệp để sử dụng trên website hoặc tài liệu quảng bá. Spa chuyên cung cấp các dịch vụ chăm sóc, tắm rửa, cắt tỉa lông, vệ sinh và thư giãn cho chó mèo. Mục tiêu là giúp khách hàng cảm thấy yên tâm tuyệt đối khi gửi gắm thú cưng của mình. Nhấn mạnh các yếu tố như: đội ngũ nhân viên tận tâm và có chuyên môn, môi trường sạch sẽ – an toàn – thân thiện, quy trình chăm sóc nhẹ nhàng và chất lượng dịch vụ cao. Văn phong nên ấm áp, tạo cảm giác tin tưởng và hài lòng cho khách hàng."
+        "Bạn là một chuyên gia sáng tạo nội dung cho một spa thú cưng cao cấp có tên là PetSpa - Dịch vụ chăm sóc thú cưng. Hãy viết một đoạn giới thiệu thân thiện và chuyên nghiệp để sử dụng trên website hoặc tài liệu quảng bá. Spa chuyên cung cấp các dịch vụ chăm sóc, tắm rửa, cắt tỉa lông, vệ sinh và thư giãn cho chó mèo. Mục tiêu là giúp khách hàng cảm thấy yên tâm tuyệt đối khi gửi gắm thú cưng của mình. Nhấn mạnh các yếu tố như: đội ngũ nhân viên tận tâm và có chuyên môn, môi trường sạch sẽ – an toàn – thân thiện, quy trình chăm sóc nhẹ nhàng và chất lượng dịch vụ cao. Văn phong nên ấm áp, tạo cảm giác tin tưởng và hài lòng cho khách hàng. Hãy sử dụng giọng điệu thân thiện, chuyên nghiệp và dễ hiểu.`, ngoài các chuyện liên quan đến các chuyên môn về dịch vụ chăm sóc thú cưng và các cách nuôi thú cưng ra thì không được nói về các vấn đề khác. Hãy trả lời bằng tiếng Việt.`,"
       ]
     },
   ],
       generationConfig: {
-        maxOutputTokens: 200, // increase if needed
+        maxOutputTokens: 300, // increase if needed
       },
     });
   }
